@@ -2,7 +2,7 @@
 
 ## 说明
 * 官方网站：`http://www.bjlmfq.com`
-* 参考网站：`http://www.loveniwed.com/m`
+* 参考网站：[核桃设计](http://m.2012heart.com)
 ***
 
 ## 技术支持：
