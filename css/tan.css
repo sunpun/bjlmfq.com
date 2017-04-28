@@ -1,0 +1,99 @@
+@charset "utf-8";
+* { margin:0 auto;}
+body {  color:#181818; background:#fff; font-size:12px;  font-family:"STHeiti","Lucida Grande","Lucida Sans Unicode","Helvetica","Arial","Verdana","sans-serif";}
+ul,li,dl,dt,dd,h3,p,h4,h1,h2 { margin:0; padding:0; list-style:none;}
+h1,h2,h3,h4,h5,h6 { outline: 0; }
+img { border:0; vertical-align: top; }
+a:link, a:visited { color:#ffffff; text-decoration:none;outline:0 none;}
+a:hover { color:#ffffff; text-decoration:none;}
+a:active { star:expression(this.onFocus = this.blur()); }
+a:-webkit-any-link { text-decoration:none;}
+a.green:link, a.green:visited { color:#17a978; text-decoration:underline;outline:0 none;}
+a.green:hover { color:#ff6600; text-decoration:underline;}
+a.black:link, a.black:visited { color:#000000; text-decoration:underline;outline:0 none;}
+a.black:hover { color:#ff6600; text-decoration:underline;}
+a.blue:link, a.blue:visited { color:#015ebd; text-decoration:none;outline:0 none;}
+a.blue:hover { color:#ff6600; text-decoration:underline;}
+input,select,button{font:12px Verdana,Arial,Tahoma; vertical-align:middle; padding:0; margin:0;}
+input:focus {outline: none}
+ins{text-decoration:none;}
+em,i{font-style:normal}
+.fl { float:left;}
+.fr { float:right;}
+.hidden { display:none;}
+.block { display:block;}
+.text_fr { text-align:right;}
+.center { text-align:center;}
+.pos_a { position:absolute;}
+.pos_r { position:relative;}
+.pos_f { position:fixed;}
+.border_all { border:1px solid #eaeaea;}
+.border_top { border-top:1px solid #eaeaea;}
+.border_bottom { border-bottom:1px solid #eaeaea;}
+.none { display: none; }
+.cur { cursor:pointer;}
+.o-hidden{overflow:hidden;}
+.green{ color:#17a978;}
+.red{ color:#ff0000;}
+.black { color:#000000;}
+
+.linheight40 { height:40px; line-height:40px;}
+.linheight20 { height:20px; line-height:20px;}
+.linheight25 { height:25px; line-height:25px;}
+.linheight30 { height:30px; line-height:30px;}
+
+/*  字体样式 */
+.fwb { font-weight: bold; }
+.fwn { font-weight: normal; }
+.fsi { font-style: italic; }
+
+/*  字体大小  */
+.f10{font-size:10px;}
+.f11{font-size:11px;}
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+/*  清除浮动  */
+.clear { clear:both; width:100%; height:0px; overflow:hidden;}
+.fn_clear:after {content:".";display:block;height:0;clear:both;visibility:hidden; overflow:hidden;}
+.fn_clear { *zoom:1;}
+
+
+/*弹出框*/
+.w_tbox {width:960px;height:586px;background:#FFFFFF;overflow:hidden;}
+.w_tleft { width:560px; overflow:hidden;}
+.w_tright {width:382;height:586px;overflow:hidden;position:relative;}
+.w_tright img {  width:382px; height:586px;} 
+.w_tright .w_closed { display:block; width:45px; height:45px; overflow:hidden; background:#da0023; position:absolute; top:0px; right:0px; z-index:99;cursor:pointer; }
+.w_tright .w_closed img { width:17px; height:17px; margin:14px auto auto 14px;transition:All 0.4s ease-in-out; -webkit-transition:All 0.4s ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;}
+.w_tright .w_closed:hover img { transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg); }
+
+.w_tmain {overflow: hidden;margin: 30px 0 0 30px;}
+.w_tmain dl { width:100%; overflow:hidden;/*  margin-bottom:20px; */}
+.w_tmain dl dt { font-size:18px; color:#000000; line-height:30px;}
+.w_tmain dl dd { overflow:hidden; margin:5px auto;}
+.w_tmain .w_city dd span {font-size: 44px;line-height: 64px;color: #000;margin-right: 30px;cursor: pointer;}
+.w_tmain .w_city dd em { font-size:32px; font-weight:bold; color:#cacaca; }
+.w_tmain .w_city dd span.on { color:#da0023}
+
+.w_tmain .w_time dd p { float:left; width:120px; height:34px; line-height:34px; margin-right:10px; display:inline; text-align:center; font-size:17px; border:1px solid #e1e1e1; background:#fbfbfb; color:#000;cursor:pointer;}
+.w_tmain .w_time dd p.on { background:#da0023; border:1px solid #da0023; color:#FFFFFF;}
+.w_tmain .w_style{margin-top: 42px;margin-bottom: 26px;}
+.w_tmain .w_style label {position: relative;float:left; width:110px; padding-left: 20px; line-height:40px; font-size:16px;cursor:pointer;}
+.w_tmain .w_style label .check{position: absolute;width: 14px;height: 14px;top: 50%;margin-top: -7px;left: 0;display: block;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAA3NCSVQICAjb4U/gAAAALVBMVEX////////7+/v39/fz8/Pv7+/q6uri4uLS0tLMzMy9vb25ubm1tbWxsbGtra0d+8cmAAAAD3RSTlMA///////////////////ljZ6mAAAACXBIWXMAAAqcAAAKnAH00t8SAAAAFnRFWHRDcmVhdGlvbiBUaW1lADA1LzEyLzEyLJl5kQAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAABFSURBVAiZY+DcDQITGKYLgkAlwyYwrc2wSQkEtBkOgWkdOH3YGARsGK64gIAvnL4aCgKxcPpZGgjkMawA010MXO9AYAEA0BQj/4FOPFAAAAAASUVORK5CYII=) left center no-repeat;}
+.w_tmain .w_style label .check input{position: absolute;top: 0;left: 0;width: 14px;height: 14px;opacity: 0;filter: alpha(opacity=0);}
+.w_tmain .w_style label .check_on{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAA3NCSVQICAjb4U/gAAAANlBMVEX////////19vfz8/Px8fHv7+/r6+vj4+Pg4eLMzMy8vLy5ubm1tbWxsbGvr6+tra2rq6sXa8DL804UAAAAEnRSTlMA//////////////////////9ewYY+AAAACXBIWXMAAAp1AAAKdQFKJd39AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAFZJREFUCJlNxwESgCAIRNFVwwK14v6XDXVC3ww7fICLY4DP4C5GCZuyp1rWVRrqSp0ZJ6sYK1pSTcmmb0M77BtnLIm0o24k/UU37mw0Tw+Es2MB5HWCD/RzBaSjlSU+AAAAAElFTkSuQmCC);}
+
+
+.w_input p { width:100%; line-height:36px; overflow:hidden; font-size:18px;}
+.w_input p .w_input_1 { font-size: 14px;float:left; width:155px; height:36px; line-height:36px; border:1px solid #e1e1e1; background:#f6f6f6; padding:5px; margin-right:10px; display:inline; color:#000000;}
+.w_input p span { color:#dc504f;}
+
+.w_tbtn { width:510px; overflow:hidden; margin:32px auto 0;}
+.w_tbtn a { float:left; width:180px; height:40px;color: #fff; line-height:40px; text-align:center; font-size:16px; margin-right:12px;}
+.w_tbtn a.w_sub_1 { background:#000000;} 
+.w_tbtn a.w_sub_2 { background:#ac8746;} 
+
+.layui-layer-setwin .layui-layer-close2 { top:-15px; right:-15px;}

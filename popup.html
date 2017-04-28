@@ -1,0 +1,173 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>艾特报名弹出</title>
+<link rel="stylesheet" type="text/css" href="css/tan.css">
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.0.1/skin/default/layer.css?v=3.0.11110" id="layuicss-skinlayercss"></head>
+
+<body style="background:#000000;">
+<!--弹出框-->
+<div class="w_tbox">
+	<div class="w_tleft fl">
+	<form action="form.php" id="newwell_form">
+	<input type="hidden" name="info[chengshi]" id="chengshi">
+	<input type="hidden" name="info[date]" id="date">
+	<input type="hidden" name="info[style]" id="style">
+		<div class="w_tmain">
+			<dl class="w_city">
+				<dt>选择城市</dt>
+				<dd id="chengshi_">
+					<span>北京</span>
+					<span>三亚</span>
+					<span>青岛</span>
+				</dd>
+			</dl>
+			<dl class="w_time">
+				<!-- <dt>拍摄时间</dt> -->
+				<dd>
+					<p>3个月内</p>
+					<p>6个月内</p>
+					<p>一年内</p>
+				</dd>
+			</dl>
+            <dl class="w_style">
+				<dt>拍摄风格</dt>
+				<dd>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="水岸轻奢"></span> 水岸轻奢</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="秘境系列"></span> 秘境系列</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="唯美简约"></span> 唯美简约</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="时尚@SHOW"></span> 时尚@SHOW</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="私家花园"></span> 私家花园</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="中国新娘"></span> 中国新娘</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="城市旅拍"></span> 城市旅拍</label>
+					<label><span class="check J_check"><input name="style" type="checkbox" value="环球旅拍"></span> 环球旅拍</label>
+				</dd>
+			</dl>
+			<div class="w_input">
+				<p>
+					<input class="w_input_1" name="info[uname]" id="uname" type="text" placeholder="姓名">
+					<input class="w_input_1" name="info[tel]" id="tel" type="text" placeholder="手机" style="border-color: rgb(225, 225, 225); background: rgb(246, 246, 246);">
+					<input class="w_input_1" name="info[qq]" id="qq" type="text" placeholder="微信/QQ">
+				</p>
+				<p style="margin-top: 6px;"><span onClick="parent.layer.closeAll('iframe');">*</span>网络预约即可领取<span>5000元婚嫁大礼包</span></p>
+			</div>
+			<div class="w_tbtn">
+				<a class="w_sub_1" href="javascript:;" onClick="tijiao();">获取优惠</a>
+				<a class="w_sub_2" href="" target="_blank">在线咨询</a>
+			</div>
+		</div>
+	</form>
+	</div>
+	<div class="w_tright fr">
+		<img src="images/popup_pic.jpg">	
+	</div>
+</div>
+<!--弹出框 end-->
+<script>
+$(document).ready(function(){
+	$(".w_city dd span").click(function(){
+		$(".w_city dd span").removeClass("on");
+		$(this).addClass("on");
+	});
+	$(".w_time dd p").click(function(){
+		$(".w_time dd p").removeClass("on");
+		$(this).addClass("on");
+	});
+	$(".J_check").on("click",function(){
+        $(this).hasClass("check_on")? $(this).removeClass("check_on"): $(this).addClass("check_on");
+    });
+	//输入框样式
+	$(function(){
+		$(".w_input_1").mouseover(function(){
+		$(this).css({"border-color":"#da0023","background":"#fff"});
+		}).mouseout(function(){
+			$(this).css({"border-color":"#e1e1e1","background":"#f6f6f6"});
+		}).focus(function(){
+			$(this).css({"border-color":"#da0023","background":"#fff"});
+		});	   
+	});
+});
+</script>
+<script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+<script type="text/javascript">
+/**
+ * 提交表单
+ */
+function tijiao(){
+	$("#chengshi").val($(".w_city").find(".on").text());
+	$("#date").val($(".w_time").find(".on").text());
+	$("#style").val($(".w_style").find(".check_on").text());
+	var style = "";
+	$('.w_style :checked').each(function(){
+		if (!style) {
+			style = $(this).val()
+		}else{
+			style +=","+$(this).val();
+		}	 
+	});
+	$("#style").val(style);
+	
+	var chengshi = $("#chengshi").val();
+	if(chengshi.length<1){
+		layer.tips('请选择拍摄城市',$("#chengshi_"), { tips: [1, '#FF3100'], time:3000 });
+		return false;
+	}
+	var date = $("#date").val();
+	if(date.length<1){
+		layer.tips('请选择拍摄时间',$(".w_time dd"), { tips: [1, '#FF3100'], time:3000 });
+		return false;
+	}
+
+	var style = $("#style").val();
+	if(style.length<1){
+		layer.tips('请选择拍摄时间',$(".w_style dd"), { tips: [1, '#FF3100'], time:3000 });
+		return false;
+	}
+
+	var uname = $("#uname").val();	
+	if(uname.length<1){
+		layer.tips('姓名不能为空',$("#uname"), { tips: [1, '#FF3100'], time:3000 });
+		return false;
+	}
+	if(!/.*[\u4e00-\u9fa5]+.*$/.test(uname)){
+        layer.tips('姓名还是填中文的吧',$("#uname"), { tips: [1, '#FF3100'], time:3000 });
+        return false;
+    }
+	var mobile = parseInt($("#tel").val());
+    if(mobile<13000000000||mobile>18999999999||isNaN(mobile)){
+        layer.tips('请输入正确的手机号',$("#tel"), { tips: [1, '#FF3100'], time:3000 });
+        return false;
+    }
+
+    var action = $("#newwell_form").attr('action');
+    $.ajax({
+        type: 'POST',
+        url: action,
+        timeout: 20000,
+        dataType: "json",
+        beforeSend: function(){},
+        error: function(){},
+        data: $("#newwell_form").serialize(),
+        success: function(data){
+            if(data.code==200){
+            	layer.msg(data.message);
+            	$("#uname").value("");
+            	$("#tel").value("");
+            	$("#qq").value("");
+            }else{
+            	layer.msg(data.message);
+            }
+            
+        },
+        error:function(data){
+        	layer.msg("网络延迟，请您一定要再试一试");
+        }
+    });
+    //layer.msg("提交成功");
+    //$('#newwell_form')[0].reset();
+    //parent.layer.closeAll('iframe');
+}
+</script>
+
+</body></html>
