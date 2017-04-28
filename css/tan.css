@@ -81,14 +81,14 @@ em,i{font-style:normal}
 .w_tmain .w_time dd p { float:left; width:120px; height:34px; line-height:34px; margin-right:10px; display:inline; text-align:center; font-size:17px; border:1px solid #e1e1e1; background:#fbfbfb; color:#000;cursor:pointer;}
 .w_tmain .w_time dd p.on { background:#da0023; border:1px solid #da0023; color:#FFFFFF;}
 .w_tmain .w_style{margin-top: 42px;margin-bottom: 26px;}
-.w_tmain .w_style label {position: relative;float:left; width:110px; padding-left: 20px; line-height:40px; font-size:16px;cursor:pointer;}
+.w_tmain .w_style label {position: relative;float:left; width:110px; padding-left: 20px; line-height:36px; font-size:16px;cursor:pointer;}
 .w_tmain .w_style label .check{position: absolute;width: 14px;height: 14px;top: 50%;margin-top: -7px;left: 0;display: block;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAA3NCSVQICAjb4U/gAAAALVBMVEX////////7+/v39/fz8/Pv7+/q6uri4uLS0tLMzMy9vb25ubm1tbWxsbGtra0d+8cmAAAAD3RSTlMA///////////////////ljZ6mAAAACXBIWXMAAAqcAAAKnAH00t8SAAAAFnRFWHRDcmVhdGlvbiBUaW1lADA1LzEyLzEyLJl5kQAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAABFSURBVAiZY+DcDQITGKYLgkAlwyYwrc2wSQkEtBkOgWkdOH3YGARsGK64gIAvnL4aCgKxcPpZGgjkMawA010MXO9AYAEA0BQj/4FOPFAAAAAASUVORK5CYII=) left center no-repeat;}
 .w_tmain .w_style label .check input{position: absolute;top: 0;left: 0;width: 14px;height: 14px;opacity: 0;filter: alpha(opacity=0);}
 .w_tmain .w_style label .check_on{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAA3NCSVQICAjb4U/gAAAANlBMVEX////////19vfz8/Px8fHv7+/r6+vj4+Pg4eLMzMy8vLy5ubm1tbWxsbGvr6+tra2rq6sXa8DL804UAAAAEnRSTlMA//////////////////////9ewYY+AAAACXBIWXMAAAp1AAAKdQFKJd39AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAFZJREFUCJlNxwESgCAIRNFVwwK14v6XDXVC3ww7fICLY4DP4C5GCZuyp1rWVRrqSp0ZJ6sYK1pSTcmmb0M77BtnLIm0o24k/UU37mw0Tw+Es2MB5HWCD/RzBaSjlSU+AAAAAElFTkSuQmCC);}
 
 
 .w_input p { width:100%; line-height:36px; overflow:hidden; font-size:18px;}
-.w_input p .w_input_1 { font-size: 14px;float:left; width:155px; height:36px; line-height:36px; border:1px solid #e1e1e1; background:#f6f6f6; padding:5px; margin-right:10px; display:inline; color:#000000;}
+.w_input p .w_input_1 { font-size: 14px;float:left; width:150px; height:26px; line-height:26px; border:1px solid #e1e1e1; background:#f6f6f6; padding:5px; margin-right:10px; display:inline; color:#000000;}
 .w_input p span { color:#dc504f;}
 
 .w_tbtn { width:510px; overflow:hidden; margin:32px auto 0;}
