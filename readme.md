@@ -4,6 +4,9 @@
 * 官方网址：`http://www.bjlmfq.com`
 * 参考网站：`http://www.aite.cn`
 
+## 内容截图
+![screenshot](screenshot.jpg)
+
 ***
 
 ## 技术支持：
